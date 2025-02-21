@@ -1,0 +1,45 @@
+/**
+ * In our app, we have a few middleware that generate a string of HTML.
+ * On occassion it's fine to just use dangerouslySetInnerHTML directly for
+ * those, but that requires that you have a host node for the innerHTML.
+ *
+ * In certain scenarios (like tags in <head />), there's HTML that we need
+ * to insert directly where it is. This component enables that because
+ * we replace <raw-text> and </raw-text> with empty strings. Effectively
+ * making whatever's between <raw-text> and </raw-text> inlined in place.
+ *
+ * This is not something you should typically use, but it can be useful
+ * on occassion.
+ */
+function RawText({ children }) {
+  return <raw-text dangerouslySetInnerHTML={{ __html: children }} />
+}
+
+function App(props) {
+  return (
+    <html>
+      <head>
+        <RawText>{props.marketingAssets.headHTML}</RawText>
+      </head>
+      <body>{`... etc...`}</body>
+    </html>
+  )
+}
+
+function renderApp(props) {
+  return `
+    <!DOCTYPE html>
+    ${ReactDOMServer.renderToStaticMarkup(<App {...props} />).replace(
+      /<\/?raw-text>/g,
+      '',
+    )}
+  `
+
+  Natural Language Processing (NLP) is becoming one of the most popular data science specialization in both academic setting and industry these days. In the past years I was lucky enough to have exposure & work on both supervised and unsupervised learning NLP projects; I found those super interesting but can be challenging at the same time.
+
+For folks new to NLP, analyzing unstructured text data can be a big challenge due to its unstructured form and non-numeric nature. Just like you would process and clean numeric data — a list of pre-processing is required to clean text data for more accuracy analytical results, regardless of what you would like to do with them (classification, text clustering, topic modeling, etc).
+
+Today, I put up a text data processing guide and wish to share it to wider audiences on how to process text data. This guide is put together for beginners, and examples are created for demonstration purpose.
+
+Dataset
+When I think about how I would write this guide, I actually want to just put up some random text myself to avoid the trouble finding a good data source. However, when I started to put something random — I realized it may be hard for me to fake how dirty (unorganized) some real text data source can be. So, I decided to use this open source dataset: Coronavirus tweets NLP from Kaggle for this guide.
