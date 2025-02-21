@@ -6,5 +6,5 @@ console.log(data)
 moreWork() // will run after readFileSync
 
 function moreWork(){
-    console.log("More work")
+    console.log("More work");
 }
