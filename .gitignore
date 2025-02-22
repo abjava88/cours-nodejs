@@ -1,0 +1,29 @@
+# Node.js modules
+**/node_modules/
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.pid
+*.seed
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Npm package-lock file
+package-lock.json
+
+# Yarn lock file
+yarn.lock
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Build output
+/dist
+/build
