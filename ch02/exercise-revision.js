@@ -3,9 +3,18 @@ function calculCouteux(n) {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(n * n); // Simule un calcul et renvoie le résultat
-    }, 52000); // 52 secondes
+    }, 5000); // 5 secondes
   });
 }
 
+async function appelAsynchrone(n) {
+    console.log("Calcul en cours...");
+    const result = await calculCouteux(n); // Attend le résultat de la fonction coûteuse
+    console.log(result);
+    return result;
+}
 
-// fonction asynchrone en utilisant async await qui appelle calculCouteux avec le nombre 10
+const reponse = appelAsynchrone(10);
+console.log(reponse);
+console.log("Une aure requette http arrive");
+
