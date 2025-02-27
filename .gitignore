@@ -9,11 +9,6 @@ logs/
 *.pid
 *.seed
 
-# Environment files
-.env
-.env.local
-.env.*.local
-
 # Npm package-lock file
 package-lock.json
 
