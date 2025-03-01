@@ -3,7 +3,6 @@ GET http://localhost:3000
 Accept: application/json
 
 
-
 ### Requête POST
 POST http://localhost:3000
 Content-Type: application/json
