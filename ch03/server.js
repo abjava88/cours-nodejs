@@ -1,5 +1,6 @@
 require('dotenv').config()
 const http = require('http');
+const {log} = require("./logger");
 
 const hostname = process.env.HOST
 const port = process.env.PORT
@@ -10,6 +11,6 @@ const server = http.createServer((req, res) => {
   res.end('Hello World');
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+server.listen(5000, "localhost", () => {
+  log(`Server running at http://${hostname}:${port}/`);
 });
