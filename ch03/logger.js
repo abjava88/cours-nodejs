@@ -1,3 +1,3 @@
-exports.log = function(msg){
-    console.log(`logger module: ${msg}`);
-}
+exports.log = function (msg) {
+  console.log(`logger module: ${msg}`);
+};
