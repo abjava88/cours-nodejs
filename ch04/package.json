@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start-server": "nodemon server.js",
-    "start-tp03": "nodemon tp03.js"
+    "start-tp03": "nodemon tp03.js",
+    "start-tp04": "nodemon tp04.js"
   },
   "keywords": [],
   "author": "",

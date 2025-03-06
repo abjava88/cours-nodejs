@@ -9,20 +9,23 @@ app.get("/", (req, res, next) => {
   res.send("Got get to root path");
 });
 
-app.get("/users", (req, res) => {
+app.get("/users", auth, (req, res) => {
   console.log("Got get to /users");
   res.send("Got get to /users");
 });
 
-// Un middleware utilisateur de gestion des erreurs. 
-app.get("*", (req,res) => {
-    console.error("404 not found");
-    res.send("404 not found");
-});
 
 function logger(req, res, next) {
   console.log("Inside logger");
   next();
+}
+
+function auth(req, res, next) {
+  if (req.query.admin === "true") {
+    next();
+  } else {
+    res.end("Auth failed");
+  }
 }
 
 app.listen(port, () => {
