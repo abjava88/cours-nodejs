@@ -2,7 +2,13 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
-app.use(logger);
+// Middleware de journalisation
+const loggerMiddleware = (req, res, next) => {
+    console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`);
+    next(); // Passe au middleware suivant ou à la route
+};
+
+app.use(loggerMiddleware);
 
 app.get("/", (req, res, next) => {
   console.log("Got get to root path");
