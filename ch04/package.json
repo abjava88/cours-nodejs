@@ -8,7 +8,8 @@
     "start-tp03": "nodemon tp03.js",
     "start-tp04": "nodemon tp04.js",
     "start-tp05": "nodemon tp05.js",
-    "start-tp06": "nodemon tp06.js"
+    "start-tp06": "nodemon tp06.js",
+    "exercise": "nodemon exercise.js"
   },
   "keywords": [],
   "author": "",
