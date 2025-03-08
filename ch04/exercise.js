@@ -12,7 +12,6 @@ const users = [
 
 // Middleware 1 : Récupérer l'utilisateur à partir de userId
 const getUser = (req, res, next) => {
-
   if (!req.query.userId) {
     return res.status(404).json({ message: "Utilisateur non trouvé." });
   }
@@ -21,8 +20,8 @@ const getUser = (req, res, next) => {
   const user = users.find((u) => u.id === userId);
 
   if (!user) {
-    return res.status(404).json({ 
-      message: "Utilisateur non trouvé." 
+    return res.status(404).json({
+      message: "Utilisateur non trouvé.",
     });
   }
 
@@ -37,7 +36,6 @@ const checkAdmin = (req, res, next) => {
   }
   next();
 };
-
 
 // Route protégée par les middlewares
 app.get("/admin", getUser, checkAdmin, (req, res) => {
