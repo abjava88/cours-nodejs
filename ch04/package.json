@@ -11,12 +11,14 @@
     "start-tp06": "nodemon tp06.js",
     "exercise": "nodemon exercise.js",
     "tp07": "nodemon tp07.js",
-    "tp08": "nodemon tp08.js"
+    "tp08": "nodemon tp08.js",
+    "tp09": "nodemon tp09.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.3",
     "express": "^4.21.2"
   }
 }
