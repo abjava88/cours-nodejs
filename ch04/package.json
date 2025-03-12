@@ -12,13 +12,15 @@
     "exercise": "nodemon exercise.js",
     "tp07": "nodemon tp07.js",
     "tp08": "nodemon tp08.js",
-    "tp09": "nodemon tp09.js"
+    "tp09": "nodemon tp09.js",
+    "solution": "nodemon exercise1.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.3",
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "uuidv4": "^6.2.13"
   }
 }
