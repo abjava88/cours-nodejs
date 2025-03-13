@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "tp01": "nodemon tp01.js",
-    "tp02": "nodemon tp02.js"
+    "tp02": "nodemon tp02.js",
+    "exercise": "nodemon exercise.js"
   },
   "keywords": [],
   "author": "",
